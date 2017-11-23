@@ -1,0 +1,32 @@
+<div class="container panel panel-default">
+    {{#each products }}
+    <div class="products">
+        <h3 class="name">{{name}}</h3>
+        <p class="price">{{price}}</p>
+        <p><a href="https://www.dotmed.com{{link}}" target="_blank" class="readproduct">View Product</a></p>
+        <div>
+
+            <h5>Comments</h5>
+            {{#each comments}}
+            <div class="comments">
+                <div data-comment-id="{{this._id}}" class="btn btn-xs btn-danger">x</div>
+                {{this.text}}
+            </div>
+            {{/each}}
+
+            <form action="/comment" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Write a comment" name="comment">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" class="form-control" name="{{_id}}">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-sm btn-primary">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,29 @@
+.jumbotron {
+    padding: 30px 60px;
+}
+
+h3, p {
+    display: inline-block;
+}
+
+.readproduct {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 0 0 10px;
+}
+
+.panel {
+    margin-bottom: 5px;
+}
+
+.comments {
+    padding-bottom: 3px;
+}
+
+.products {
+    border-bottom: 1px solid #ccc;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}

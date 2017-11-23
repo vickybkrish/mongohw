@@ -1,0 +1,30 @@
+{
+  "name": "mongod-web-scrapper",
+  "version": "1.0.0",
+  "description": "Mongod, Mongoose, Cheerio.js, Express, Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o-soft/Mongod-Web-Scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.10.2",
+    "morgan": "^1.8.1",
+    "request": "^2.81.0"
+  }
+}
