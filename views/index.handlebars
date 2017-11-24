@@ -1,32 +1,47 @@
-<div class="container panel panel-default">
-    {{#each products }}
-    <div class="products">
-        <h3 class="name">{{name}}</h3>
-        <p class="price">{{price}}</p>
-        <p><a href="https://www.dotmed.com{{link}}" target="_blank" class="readproduct">View Product</a></p>
-        <div>
+<div class='main-content'>
+    <div class='page-title'> SCRAPES</div>
 
-            <h5>Comments</h5>
-            {{#each comments}}
-            <div class="comments">
-                <div data-comment-id="{{this._id}}" class="btn btn-xs btn-danger">x</div>
-                {{this.text}}
+    {{#each Article}}
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="{{this.image}}" alt="Image">
+                </figure>
             </div>
-            {{/each}}
-
-            <form action="/comment" method="POST">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Write a comment" name="comment">
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{this.title}}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    {{this.text}}
                 </div>
-                <div class="form-group">
-                    <input type="hidden" class="form-control" name="{{_id}}">
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-sm btn-primary">
-                </div>
-            </form>
-
+            </div>
+            <footer class="card-footer">
+                <a class="add-favorite card-footer-item" favorite-id="{{this._id}}">Favorite</a>
+                <a class="reviews card-footer-item" data-id="{{this._id}}">Review</a>
+            </footer>
         </div>
-    </div>
     {{/each}}
+
+</div>
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Reviews</p>
+      <button class="cancel delete"></button>
+    </header>
+    <section class="modal-card-body">
+        <div class='history'></div>
+        <br><span>Add Review:</span>
+      <textarea class='new-review' type='text' placeholder='Your review'></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <a class="save button is-success">Save Review</a>
+      <a class="cancel button">Cancel</a>
+    </footer>
+  </div>
 </div>

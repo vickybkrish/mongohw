@@ -1,0 +1,105 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('http://media.socastsrm.com/wordpress/wp-content/blogs.dir/684/files/2017/09/News2.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: scroll;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    box-shadow: 0 8px 6px -8px black;
+    color: ivory;
+    font-weight: bold;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.options {
+    display: flex;
+    margin: auto 0;
+}
+
+.tab {
+    padding: 20px 10px;
+    border-radius: 5%;
+    width: 100px;
+    text-align: center;
+}
+
+.tab:hover {
+    background-color: #97CDFF;
+    cursor: pointer;
+}
+
+.logo {
+    margin: auto 0;
+    font-size: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 0;
+    z-index: 0;
+    background-color: rgba(248,248,255,0.8);
+    min-height: 100%;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    margin: 20px;
+    width: 15%;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+.card-footer a {
+    color: #007EE5;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.new-review {
+    width: 100%;
+    height: 100px;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trash {
+    width: 15px;
+    height: 18px;
+}
+
+.trash:hover {
+    cursor: pointer;
+}

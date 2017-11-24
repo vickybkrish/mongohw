@@ -1,0 +1,47 @@
+<div class='main-content'>
+    <div class='page-title'>FAVORITES</div>
+
+    {{#each Article}}
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="{{this.image}}" alt="Image">
+                </figure>
+            </div>
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{this.title}}
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    {{this.text}}
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a class="remove card-footer-item" remove-id="{{this._id}}">Remove</a>
+                <a class="reviews card-footer-item" data-id="{{this._id}}">Review</a>
+            </footer>
+        </div>
+    {{/each}}
+
+</div>
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Reviews</p>
+      <button class="cancel delete"></button>
+    </header>
+    <section class="modal-card-body">
+        <div class='history'></div>
+        <br><span>Add Review:</span>
+      <textarea class='new-review' type='text' placeholder='Your review'></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <a class="save button is-success">Save Review</a>
+      <a class="cancel button">Cancel</a>
+    </footer>
+  </div>
+</div>
